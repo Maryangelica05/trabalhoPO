@@ -1,41 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TrabalhoPo.MainPage">
+             x:Class="TrabalhoPo.MainPage"
+             Shell.NavBarIsVisible="false">
+<Grid>
+   <Image Source="background.png"
+          Aspect="AspectFill"/>
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+   <Image Source="bear.png"
+          Aspect="AspectFill"
+          VerticalOptions="End"/>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+   <Frame x:Name="frameFell"
+          BackgroundColor="#f5cbcf"
+          Margin="10,10,10,490"
+          CornerRadius="10">
+   <Grid>
+       <Grid.RowDefinitions>
+       <RowDefinition Height="*"/>
+       <RowDefinition Height="*"/>
+       <RowDefinition Height="*"/>
+       </Grid.RowDefinitions>
+       <Grid.ColumnDefinitions>
+       <ColumnDefinition Width="50"/>
+       <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+   <Image Source="water.png"
+         Grid.Row="0"
+          Grid.Column="0"/>
+          
+   <Image Source="eat.png"
+         Grid.Row="1"
+          Grid.Column="0"/>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+   <Image Source="shower.png"
+         Grid.Row="2"
+          Grid.Column="0"/> 
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+   <ProgressBar x:Name="Sede"
+                ProgressColor="#2b86fc"
+                Progress="0.5"
+                Grid.Row="0"
+                Grid.Column="1"/>        
 
-        </VerticalStackLayout>
-    </ScrollView>
+   <ProgressBar x:Name="Fome"
+                ProgressColor="#f55fc3"
+                Progress="0.5"
+                Grid.Row="1"
+                Grid.Column="1"/> 
 
+   <ProgressBar x:Name="Banho"
+                ProgressColor="#7026f0"
+                Progress="0.5"
+                Grid.Row="2"
+                Grid.Column="1"/>                                          
+   </Grid>    
+   </Frame>            
+<Frame x:Name="frameactions"
+          BackgroundColor="#55f5588c"
+          Padding="0"
+          Margin="0,50,10,0"
+          CornerRadius="10"
+          WidthRequest="60"
+          VerticalOptions="Center"
+          HorizontalOptions="End">
+
+   <Grid>
+       <Grid.RowDefinitions>
+       <RowDefinition Height="50"/>
+       <RowDefinition Height="50"/>
+       <RowDefinition Height="50"/>
+       <RowDefinition Height="50"/>
+       <RowDefinition Height="50"/>
+       </Grid.RowDefinitions>
+
+   <ImageButton Source="next.png"
+         Grid.Row="0"/>      
+   <ImageButton Source="water.png"
+         Grid.Row="1"/>   
+   <ImageButton Source="eat.png"
+         Grid.Row="2"/>  
+   <ImageButton Source="shower.png"
+         Grid.Row="3"/>        
+   <ImageButton Source="back.png"
+         Grid.Row="4"/>            
+   </Grid>           
+</Frame>          
+   
+</Grid>
 </ContentPage>
