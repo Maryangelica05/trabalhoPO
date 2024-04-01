@@ -33,5 +33,32 @@ public int GetFome()
 {
     return fome;
 }
+public void SetSede(int s)
+{
+    if (s<=1 || s>=0)
+       sede=s;
+    else if(s > 1)
+       sede=1;
+    else 
+       sede=0;
+}
 
+public int GetSede()
+{
+    return sede;
+}
+public void SetBanho(int b)
+{
+    if (b<=1 || b>=0)
+       banho=b;
+    else if(s > 1)
+       sede=1;
+    else 
+       banho=0;
+}
+
+public int GetBanho()
+{
+    return banho;
+}
 }
