@@ -7,7 +7,7 @@
    <Image Source="background.png"
           Aspect="AspectFill"/>
 
-   <Image Source="bear.png"
+   <Image x:Name="ImgPersonagem"/>
           Aspect="AspectFill"
           VerticalOptions="End"/>
 

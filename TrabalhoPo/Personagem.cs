@@ -4,9 +4,9 @@ namespace TrabalhoPo;
 public class Personagem
 {
 
-  int sede;
-  int fome;
-  int banho;
+  protected double sede;
+ protected  double fome;
+    protected double  banho;
 
 
 
@@ -19,7 +19,7 @@ public Personagem()
    banho=0;
 }
 
-public void SetFome(int f)
+public void SetFome( double f)
 {
     if (f<=1 || f>=0)
        fome=f;
@@ -29,11 +29,11 @@ public void SetFome(int f)
        fome=0;
 }
 
-public int GetFome()
+public  double GetFome()
 {
     return fome;
 }
-public void SetSede(int s)
+public void SetSede( double s)
 {
     if (s<=1 || s>=0)
        sede=s;
@@ -43,22 +43,33 @@ public void SetSede(int s)
        sede=0;
 }
 
-public int GetSede()
+public  double GetSede()
 {
     return sede;
 }
-public void SetBanho(int b)
+public void SetBanho( double b)
 {
     if (b<=1 || b>=0)
        banho=b;
-    else if(s > 1)
-       sede=1;
+    else if(b > 1)
+       banho=1;
     else 
        banho=0;
 }
 
-public int GetBanho()
+public  double GetBanho()
 {
     return banho;
 }
+
+protected string arquivo;
+public string GetArquivo()
+{
+   return arquivo;
 }
+
+   
+
+
+}
+
