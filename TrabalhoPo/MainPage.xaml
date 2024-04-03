@@ -3,90 +3,101 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TrabalhoPo.MainPage"
              Shell.NavBarIsVisible="false">
-<Grid>
-   <Image Source="background.png"
-          Aspect="AspectFill"/>
-
-   <Image x:Name="ImgPersonagem"/>
-          Aspect="AspectFill"
-          VerticalOptions="End"/>
-
-   <Frame x:Name="frameFell"
-          BackgroundColor="#f5cbcf"
-          Margin="10,10,10,490"
-          CornerRadius="10">
    <Grid>
-       <Grid.RowDefinitions>
-       <RowDefinition Height="*"/>
-       <RowDefinition Height="*"/>
-       <RowDefinition Height="*"/>
-       </Grid.RowDefinitions>
-       <Grid.ColumnDefinitions>
-       <ColumnDefinition Width="50"/>
-       <ColumnDefinition Width="*"/>
-       </Grid.ColumnDefinitions>
+      <Image Source="background.png"
+            Aspect="AspectFill"/>
 
-   <Image Source="water.png"
-         Grid.Row="0"
-          Grid.Column="0"/>
-          
-   <Image Source="eat.png"
-         Grid.Row="1"
-          Grid.Column="0"/>
+      <Image x:Name="ImgPersonagem"
+            Aspect="AspectFit"
+            VerticalOptions="End"/>
 
-   <Image Source="shower.png"
-         Grid.Row="2"
-          Grid.Column="0"/> 
+      <Frame x:Name="frameFell"
+            BackgroundColor="#f5cbcf"
+            Margin="10,10,10,490"
+            CornerRadius="10">
+            <Grid>
+                  <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                  </Grid.RowDefinitions>
+                  <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
 
-   <ProgressBar x:Name="Sede"
-                ProgressColor="#2b86fc"
-                Progress="0.5"
-                Grid.Row="0"
-                Grid.Column="1"/>        
+                  <Image Source="water.png"
+                        Grid.Row="0"
+                        Grid.Column="0"/>
+                        
+                  <Image Source="eat.png"
+                        Grid.Row="1"
+                        Grid.Column="0"/>
 
-   <ProgressBar x:Name="Fome"
-                ProgressColor="#f55fc3"
-                Progress="0.5"
-                Grid.Row="1"
-                Grid.Column="1"/> 
+                  <Image Source="shower.png"
+                        Grid.Row="2"
+                        Grid.Column="0"/> 
 
-   <ProgressBar x:Name="Banho"
-                ProgressColor="#7026f0"
-                Progress="0.5"
-                Grid.Row="2"
-                Grid.Column="1"/>                                          
-   </Grid>    
-   </Frame>            
-<Frame x:Name="frameactions"
-          BackgroundColor="#55f5588c"
-          Padding="0"
-          Margin="0,50,10,0"
-          CornerRadius="10"
-          WidthRequest="60"
-          VerticalOptions="Center"
-          HorizontalOptions="End">
+                  <ProgressBar x:Name="Sede"
+                              ProgressColor="#2b86fc"
+                              Progress="0.5"
+                              Grid.Row="0"
+                              Grid.Column="1"/>        
 
-   <Grid>
-       <Grid.RowDefinitions>
-       <RowDefinition Height="50"/>
-       <RowDefinition Height="50"/>
-       <RowDefinition Height="50"/>
-       <RowDefinition Height="50"/>
-       <RowDefinition Height="50"/>
-       </Grid.RowDefinitions>
+                  <ProgressBar x:Name="Fome"
+                              ProgressColor="#f55fc3"
+                              Progress="0.5"
+                              Grid.Row="1"
+                              Grid.Column="1"/> 
 
-   <ImageButton Source="next.png"
-         Grid.Row="0"/>      
-   <ImageButton Source="water.png"
-         Grid.Row="1"/>   
-   <ImageButton Source="eat.png"
-         Grid.Row="2"/>  
-   <ImageButton Source="shower.png"
-         Grid.Row="3"/>        
-   <ImageButton Source="back.png"
-         Grid.Row="4"/>            
-   </Grid>           
-</Frame>          
+                  <ProgressBar x:Name="Banho"
+                              ProgressColor="#7026f0"
+                              Progress="0.5"
+                              Grid.Row="2"
+                              Grid.Column="1"/>                                          
+            </Grid>    
+      </Frame>        
+
+      <Frame x:Name="frameactions"
+            BackgroundColor="#55f5588c"
+            Padding="0"
+            Margin="0,50,10,0"
+            CornerRadius="10"
+            WidthRequest="60"
+            VerticalOptions="Center"
+            HorizontalOptions="End">
+
+            <Grid>
+                  <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                  </Grid.RowDefinitions>
+
+             <ImageButton 
+                  Clicked= "TrocaPersonagem"
+                  Source="next.png"
+                  Grid.Row="0"/>      
+            <ImageButton
+                  Clicked="SedePersonagem"
+                  Source="water.png"
+                   Grid.Row="1"/>   
+            <ImageButton 
+                  Clicked="FomePersonagem"
+                  Source="eat.png"
+                  Grid.Row="2"/>  
+            <ImageButton 
+                  Clicked="BanhoPersonagem"
+                  Source="shower.png"
+                  Grid.Row="3"/>        
+             <ImageButton 
+                  Clicked="VoltaPersonagem"
+                  Source="back.png"
+                  Grid.Row="4"/>            
+            </Grid>           
+      </Frame>          
    
-</Grid>
+   </Grid>
 </ContentPage>

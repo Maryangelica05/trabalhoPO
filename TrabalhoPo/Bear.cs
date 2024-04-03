@@ -4,7 +4,7 @@ public class Bear : Personagem
     public Bear()
     {
         arquivo="bear.png";
-        fome=0;
+        fome=0.5;
 
     }
 }
