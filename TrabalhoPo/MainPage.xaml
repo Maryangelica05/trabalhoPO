@@ -97,7 +97,56 @@
                   Source="back.png"
                   Grid.Row="4"/>            
             </Grid>           
-      </Frame>          
+      </Frame>  
+
+      <Frame x:Name="frameGameOver"
+       IsVisible= "false"
+        BackgroundColor="#f5cbcf"
+        BorderColor="White"
+        Margin="5,10"
+        Grid.Row="1"
+        Grid.RowSpan="4">
+        <Grid>
+<Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                  </Grid.RowDefinitions>
+                  <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                  </Grid.ColumnDefinitions>
+
+        <VerticalStackLayout>
+<Label Text="FIM DO JOGO"
+       TextColor="black"
+       Margin="20"
+       FontSize="40"
+       FontFamily="Mercado"
+       HorizontalOptions="Center"
+       VerticalOptions="Center"
+        Grid.Row="0"/>
+<Button Clicked="StartButtonClicked"
+        Text="COMEÇAR NOVAMENTE"
+        BackgroundColor="#db727d"
+        FontFamily="Flowers"
+        TextColor="Black"
+        CornerRadius="10"
+        FontSize="12"
+        HorizontalOptions="Fill"
+        HeightRequest="50"
+         Grid.Row="1"/>
+<Image Source="bichinhos.png"
+        Grid.Row="3"/>          
+
+
+
+
+
+
+</VerticalStackLayout>
+</Grid>
+       </Frame>
    
    </Grid>
 </ContentPage>

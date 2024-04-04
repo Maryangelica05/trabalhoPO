@@ -32,9 +32,23 @@ public partial class MainPage : ContentPage
 	//--------------------------------------------------------------------------------
     void PassouTempo()
 	{
-		atual.SetFome(atual.GetFome()-0.1);
-		atual.SetSede(atual.GetSede()-0.1);
-		atual.SetBanho(atual.GetBanho()-0.1);
+		vagalume.SetFome(vagalume.GetFome()-0.1);
+		vagalume.SetSede(vagalume.GetSede()-0.1);
+		vagalume.SetBanho(vagalume.GetBanho()-0.1);
+        
+
+		coalhada.SetFome(coalhada.GetFome()-0.1);
+		coalhada.SetSede(coalhada.GetSede()-0.1);
+		coalhada.SetBanho(coalhada.GetBanho()-0.1);
+        
+
+		donald.SetFome(donald.GetFome()-0.1);
+		donald.SetSede(donald.GetSede()-0.1);
+		donald.SetBanho(donald.GetBanho()-0.1);
+       
+		withhalf.SetFome(withhalf.GetFome()-0.1);
+		withhalf.SetSede(withhalf.GetSede()-0.1);
+		withhalf.SetBanho(withhalf.GetBanho()-0.1);
         AtualizaPersonagem();
 	}
 
@@ -74,6 +88,7 @@ public partial class MainPage : ContentPage
 		Sede.Progress = atual.GetSede();
 		Fome.Progress = atual.GetFome();
 		Banho.Progress = atual.GetBanho();
+		ImgPersonagem.Source = atual.GetArquivo();
 	}
 	void SedePersonagem(object sender, EventArgs args)
 	{
@@ -87,9 +102,13 @@ public partial class MainPage : ContentPage
 	}
 	void BanhoPersonagem(object sender, EventArgs args)
 	{
-		atual.SetBanho(atual.GetBanho() +0.1);
+		atual.SetBanho(atual.GetBanho()+0.1);
          AtualizaPersonagem();
 	}
+ void StartButtonClicked(object sender, EventArgs args)
+  {
+    
+  }
 	
 }
 
