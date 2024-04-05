@@ -8,6 +8,9 @@ public class Personagem
    protected string arquivo;
    protected string arquivomorto;
    protected bool morto; 
+  
+ 
+
 
    public Personagem()
    {
@@ -76,6 +79,10 @@ public class Personagem
       return arquivomorto;
       else 
       return arquivo;
+   }
+    public  bool GetMorto()
+   {
+      return morto;
    }
 }
 

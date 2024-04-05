@@ -5,7 +5,9 @@ public class Bear : Personagem
     {
         arquivo="bear.png";
          arquivomorto="beardead.png";
-        fome=0.5;
+        fome=0.8;
+        sede=0.8;
+        banho=0.8;
 
     }
 }

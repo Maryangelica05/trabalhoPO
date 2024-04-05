@@ -5,7 +5,9 @@ public class duck : Personagem
     {
         arquivo="duck.png";
         arquivomorto="duckdead.png";
-        fome=0.5;
-
+        fome=0.6;
+         fome=0.6;
+        sede=0.6;
+        banho=0.6;
     }
 }

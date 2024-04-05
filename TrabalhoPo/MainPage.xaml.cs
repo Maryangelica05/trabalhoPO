@@ -8,11 +8,19 @@ public partial class MainPage : ContentPage
 	Bear withhalf;
 	Personagem atual;
 
+	IDispatcherTimer timer;
+
 	//--------------------------------------------------------------------------------
 
 	public MainPage()
 	{
 		InitializeComponent();
+		
+		Iniciar();
+	}  
+
+	void Iniciar()
+	{
 		vagalume = new firefly();
 		coalhada = new koala();
 		donald   = new duck();
@@ -21,12 +29,12 @@ public partial class MainPage : ContentPage
 		atual = vagalume;
 
 		AtualizaPersonagem();
-		
-		var timer=Application.Current.Dispatcher.CreateTimer();
+
+		timer=Application.Current.Dispatcher.CreateTimer();
 		timer.Interval=TimeSpan.FromSeconds(3);
 		timer.Tick += (s,e) => PassouTempo();
 		timer.Start();
-
+		frameGameOver.IsVisible=false;
 	}
 
 	//--------------------------------------------------------------------------------
@@ -50,6 +58,7 @@ public partial class MainPage : ContentPage
 		withhalf.SetSede(withhalf.GetSede()-0.1);
 		withhalf.SetBanho(withhalf.GetBanho()-0.1);
         AtualizaPersonagem();
+		VerificaMorto();
 	}
 
 
@@ -80,6 +89,16 @@ public partial class MainPage : ContentPage
 
 		AtualizaPersonagem();
 	}
+
+	  void VerificaMorto()
+	  {
+		if(vagalume.GetMorto() && coalhada.GetMorto() && donald.GetMorto() && withhalf.GetMorto())
+		{
+			frameGameOver.IsVisible = atual.GetMorto();
+			timer.Stop();
+		}
+	  }
+    
 	//--------------------------------------------------------------------------------
 
 	void AtualizaPersonagem()
@@ -107,7 +126,7 @@ public partial class MainPage : ContentPage
 	}
  void StartButtonClicked(object sender, EventArgs args)
   {
-    
+    Iniciar();
   }
 	
 }
