@@ -24,10 +24,17 @@ public class Personagem
    public void SetFome( double f)
    {
       if (f<=1 && f>=0)
+      {
+         morto = false;
          fome=f;
+      }
       else if(f > 1)
+      {
+       morto = false;
          fome=1;
-      else {
+      } 
+      else 
+      {
          morto = true;
          fome=0;
       }
@@ -40,9 +47,15 @@ public class Personagem
    public void SetSede( double s)
    {
       if (s<=1&& s>=0)
+         {
+             morto = false;
          sede=s;
+         }
       else if(s > 1)
+      {
+          morto = false;
          sede=1;
+      }
       else 
        {
          morto = true;
@@ -58,14 +71,21 @@ public class Personagem
    public void SetBanho( double b)
    {
       if (b<=1 && b>=0)
+   {
+         morto = false;
          banho=b;
-      else if(b > 1)
-         banho=1;
+   }
+       else if(b > 1)
+{
+     morto = false;
+         banho = 1;
+}
       else 
-      {
-         morto = true;
+   {
+       morto = true;
          banho=0;
-      }
+   }
+      
    }
 
    public  double GetBanho()
